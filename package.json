@@ -1,0 +1,22 @@
+{
+  "name": "black-hedge",
+  "version": "1.0.0",
+  "description": "BlackHedge main website.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/joshuajbouw-dev/blackhedge-website.git"
+  },
+  "author": "Joshua J. Bouw",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/joshuajbouw-dev/blackhedge-website#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-ejs-layouts": "^2.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
