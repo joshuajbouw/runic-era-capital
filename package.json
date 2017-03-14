@@ -14,6 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/joshuajbouw-dev/blackhedge-website#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "express-ejs-layouts": "^2.2.0",

@@ -13,6 +13,7 @@ module.exports = router;
 router.get('/', mainController.showHome);
 router.get('/about', mainController.showAbout);
 router.get('/contact', mainController.showContact);
+router.post('/contact', mainController.processContact);
 router.get('/tech', mainController.showTech);
 
 // 404
