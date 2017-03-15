@@ -1,9 +1,25 @@
+require('dotenv').config();
+
 const express 				= require('express'),
 			app 						= express(),
 			port 						= process.env.PORT || 8081,
 			expressLayouts 	= require('express-ejs-layouts'),
 			bodyParser			= require('body-parser'),
-			nodeMailer			= require('nodemailer');
+			nodeMailer			= require('nodemailer'),
+			session					= require('express-session'),
+			cookieParser		= require('cookie-parser'),
+			flash						= require('connect-flash');
+
+// Set sessions and cookie parser
+app.use(cookieParser());
+app.use(session({
+	secret: process.env.SESSION_SECRET,
+	name: 'Runic_Capital_Cookie',
+	cookie: { maxAge: 60000 },
+	resave: false, // Forces session to be saved back to the store.
+	saveUninitialized: false // Don't save unmodified sessions. Keeps everything light weight.
+}));
+app.use(flash());
 
 // Static asset location
 app.use(express.static(__dirname + ('/public')));
