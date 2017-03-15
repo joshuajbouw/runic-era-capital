@@ -45,25 +45,32 @@ function processContact (req,res) {
 		service: 'Gmail',
 		auth: {
 			user: 'gritt.n.auld@gmail.com',
-			pass: 'Djarum2Black'
+			pass: process.env.GMAIL_PASS
 		}
 	});
 
 	// Setup the email parameters
 	var mailOptions = {
+		// From: doesn't appear to be working, need to fix or just ditch completely.
 		from: req.body.contactformname + ' &lt;' + req.body.contactformemail + '&gt;',
-		to: 'joshua@runicera.capital',
-		subject: 'Contact Form |' + req.body.contactformsubject,
-		text: req.body.contactformmessage
+		to: 'info@runicera.capital',
+		subject: 'Contact Form | ' + req.body.contactformname + ' | ' + req.body.contactformsubject,
+		text: req.body.contactformname + ' &lt;' + req.body.contactformemail + '&gt;' + ' MESSAGE: ' + req.body.contactformmessage
 	}
 	// Send mail with defined transport
 	transporter.sendMail(mailOptions, function(error, info){
-	    if (error) {
-	        console.log('\nERROR: ' + error+'\n');
-	        // res.json({yo: 'error'});
-	    } else {
-	        console.log('\nRESPONSE SENT: ' + info.response+'\n');
-	        // res.json({yo: info.response});
-	    };
+  if (error) {
+    console.log('\nERROR: ' + error+'\n');
+    res.sendStatus(500);
+    console.log('Contact form error.');
+    // res.json({yo: 'error'});
+	  } else {
+    console.log('\nRESPONSE SENT: ' + info.response+'\n');
+    res.sendStatus(200);
+		// res.json({yo: info.response});
+		console.log('Contact form sent from successfully.');
+		req.flash('success', 'Successfully sent message!');
+		res.redirect('/contact');
+	  };
 	});
 };
