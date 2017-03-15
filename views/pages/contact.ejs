@@ -1,3 +1,7 @@
+<% if (success.length > 0) { %>
+	<div class="alert alert-success"><%= success %></div>
+<% } %>
+
 <!-- Page Title
 ============================================= -->
 <section id="page-title">
@@ -37,19 +41,19 @@
 
 					<div class="col_half">
 						<label for="contactformname">Name <small>*</small></label>
-						<input type="text" id="contactformname" name="contactformname" value="" class="sm-form-control required" />
+						<input maxlength="32" type="text" id="contactformname" name="contactformname" value="" class="sm-form-control required" />
 					</div>
 
 					<div class="col_half col_last">
 						<label for="contactformemail">Email <small>*</small></label>
-						<input type="email" id="contactformemail" name="contactformemail" value="" class="required email sm-form-control" />
+						<input maxlength="254" type="email" id="contactformemail" name="contactformemail" value="" class="required email sm-form-control" />
 					</div>
 
 					<div class="clear"></div>
 
 					<div class="col_half">
 						<label for="contactformphone">Phone</label>
-						<input type="text" id="contactformphone" name="contactformphone" value="" class="sm-form-control" />
+						<input maxlength="16" type="text" id="contactformphone" name="contactformphone" value="" class="sm-form-control" />
 					</div>
 
 					<div class="col_half col_last">
@@ -67,12 +71,13 @@
 
 					<div class="col_full">
 						<label for="contactformsubject">Subject <small>*</small></label>
-						<input type="text" id="contactformsubject" name="contactformsubject" value="" class="required sm-form-control" />
+						<input maxlength="16" type="text" id="contactformsubject" name="contactformsubject" value="500" class="required sm-form-control" />
 					</div>
 
 					<div class="col_full">
-						<label for="contactformmessage">Message <small>*</small></label>
+						<label maxlength="" for="contactformmessage">Message <small>*</small></label>
 						<textarea class="required sm-form-control" id="contactformmessage" name="contactformmessage" rows="6" cols="30"></textarea>
+						<p><small>Max 500 characters</small></p>
 					</div>
 
 					<div class="col_full hidden">
