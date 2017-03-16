@@ -2100,26 +2100,26 @@ var SEMICOLON = SEMICOLON || {};
 
 		init: function(){
 
-			// SEMICOLON.widget.animations();
-			// SEMICOLON.widget.youtubeBgVideo();
-			// SEMICOLON.widget.tabs();
-			// SEMICOLON.widget.tabsJustify();
-			// SEMICOLON.widget.tabsResponsive();
-			// SEMICOLON.widget.tabsResponsiveResize();
-			// SEMICOLON.widget.toggles();
-			// SEMICOLON.widget.accordions();
-			// SEMICOLON.widget.counter();
-			// SEMICOLON.widget.roundedSkill();
-			// SEMICOLON.widget.progress();
-			// // SEMICOLON.widget.twitterFeed();
-			// // SEMICOLON.widget.flickrFeed();
+			SEMICOLON.widget.animations();
+			SEMICOLON.widget.youtubeBgVideo();
+			SEMICOLON.widget.tabs();
+			SEMICOLON.widget.tabsJustify();
+			SEMICOLON.widget.tabsResponsive();
+			SEMICOLON.widget.tabsResponsiveResize();
+			SEMICOLON.widget.toggles();
+			SEMICOLON.widget.accordions();
+			SEMICOLON.widget.counter(); // Seperate this later
+			SEMICOLON.widget.roundedSkill();
+			SEMICOLON.widget.progress();
+			// SEMICOLON.widget.twitterFeed();
+			// SEMICOLON.widget.flickrFeed();
 			// SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
 			// SEMICOLON.widget.dribbbleShots( '01530280af335d298e756ed8ef786c8c4e92a50b88e53a185531b1a639e768b8' );
 			// SEMICOLON.widget.navTree();
-			// SEMICOLON.widget.textRotater();
+			SEMICOLON.widget.textRotater(); // Seperate this later
 			// SEMICOLON.widget.carousel();
-			// SEMICOLON.widget.linkScroll();
-			// // SEMICOLON.widget.contactForm();
+			SEMICOLON.widget.linkScroll();
+			// SEMICOLON.widget.contactForm();
 			// SEMICOLON.widget.subscription();
 			// SEMICOLON.widget.quickContact();
 			// SEMICOLON.widget.stickySidebar();
