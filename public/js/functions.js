@@ -2100,31 +2100,31 @@ var SEMICOLON = SEMICOLON || {};
 
 		init: function(){
 
-			SEMICOLON.widget.animations();
-			SEMICOLON.widget.youtubeBgVideo();
-			SEMICOLON.widget.tabs();
-			SEMICOLON.widget.tabsJustify();
-			SEMICOLON.widget.tabsResponsive();
-			SEMICOLON.widget.tabsResponsiveResize();
-			SEMICOLON.widget.toggles();
-			SEMICOLON.widget.accordions();
-			SEMICOLON.widget.counter();
-			SEMICOLON.widget.roundedSkill();
-			SEMICOLON.widget.progress();
-			SEMICOLON.widget.twitterFeed();
-			SEMICOLON.widget.flickrFeed();
-			SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
-			SEMICOLON.widget.dribbbleShots( '01530280af335d298e756ed8ef786c8c4e92a50b88e53a185531b1a639e768b8' );
-			SEMICOLON.widget.navTree();
-			SEMICOLON.widget.textRotater();
-			SEMICOLON.widget.carousel();
-			SEMICOLON.widget.linkScroll();
-			SEMICOLON.widget.contactForm();
-			SEMICOLON.widget.subscription();
-			SEMICOLON.widget.quickContact();
-			SEMICOLON.widget.stickySidebar();
-			SEMICOLON.widget.cookieNotify();
-			SEMICOLON.widget.extras();
+			// SEMICOLON.widget.animations();
+			// SEMICOLON.widget.youtubeBgVideo();
+			// SEMICOLON.widget.tabs();
+			// SEMICOLON.widget.tabsJustify();
+			// SEMICOLON.widget.tabsResponsive();
+			// SEMICOLON.widget.tabsResponsiveResize();
+			// SEMICOLON.widget.toggles();
+			// SEMICOLON.widget.accordions();
+			// SEMICOLON.widget.counter();
+			// SEMICOLON.widget.roundedSkill();
+			// SEMICOLON.widget.progress();
+			// // SEMICOLON.widget.twitterFeed();
+			// // SEMICOLON.widget.flickrFeed();
+			// SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
+			// SEMICOLON.widget.dribbbleShots( '01530280af335d298e756ed8ef786c8c4e92a50b88e53a185531b1a639e768b8' );
+			// SEMICOLON.widget.navTree();
+			// SEMICOLON.widget.textRotater();
+			// SEMICOLON.widget.carousel();
+			// SEMICOLON.widget.linkScroll();
+			// // SEMICOLON.widget.contactForm();
+			// SEMICOLON.widget.subscription();
+			// SEMICOLON.widget.quickContact();
+			// SEMICOLON.widget.stickySidebar();
+			// SEMICOLON.widget.cookieNotify();
+			// SEMICOLON.widget.extras();
 
 		},
 
@@ -3174,76 +3174,76 @@ var SEMICOLON = SEMICOLON || {};
 			});
 		},
 
-		contactForm: function(){
+		// contactForm: function(){
 
-			if( !$().validate ) {
-				console.log('contactForm: Form Validate not Defined.');
-				return true;
-			}
+		// 	if( !$().validate ) {
+		// 		console.log('contactForm: Form Validate not Defined.');
+		// 		return true;
+		// 	}
 
-			if( !$().ajaxSubmit ) {
-				console.log('contactForm: jQuery Form not Defined.');
-				return true;
-			}
+		// 	if( !$().ajaxSubmit ) {
+		// 		console.log('contactForm: jQuery Form not Defined.');
+		// 		return true;
+		// 	}
 
-			var $contactForm = $('.contact-widget:not(.customjs)');
-			if( $contactForm.length < 1 ){ return true; }
+		// 	var $contactForm = $('.contact-widget:not(.customjs)');
+		// 	if( $contactForm.length < 1 ){ return true; }
 
-			$contactForm.each( function(){
-				var element = $(this),
-					elementAlert = element.attr('data-alert-type'),
-					elementLoader = element.attr('data-loader'),
-					elementResult = element.find('.contact-form-result'),
-					elementRedirect = element.attr('data-redirect');
+		// 	$contactForm.each( function(){
+		// 		var element = $(this),
+		// 			elementAlert = element.attr('data-alert-type'),
+		// 			elementLoader = element.attr('data-loader'),
+		// 			elementResult = element.find('.contact-form-result'),
+		// 			elementRedirect = element.attr('data-redirect');
 
-				element.find('form').validate({
-					submitHandler: function(form) {
+		// 		element.find('form').validate({
+		// 			submitHandler: function(form) {
 
-						elementResult.hide();
+		// 				elementResult.hide();
 
-						if( elementLoader == 'button' ) {
-							var defButton = $(form).find('button'),
-								defButtonText = defButton.html();
+		// 				if( elementLoader == 'button' ) {
+		// 					var defButton = $(form).find('button'),
+		// 						defButtonText = defButton.html();
 
-							defButton.html('<i class="icon-line-loader icon-spin nomargin"></i>');
-						} else {
-							$(form).find('.form-process').fadeIn();
-						}
+		// 					defButton.html('<i class="icon-line-loader icon-spin nomargin"></i>');
+		// 				} else {
+		// 					$(form).find('.form-process').fadeIn();
+		// 				}
 
-						$(form).ajaxSubmit({
-							target: elementResult,
-							dataType: 'json',
-							success: function( data ) {
-								if( elementLoader == 'button' ) {
-									defButton.html( defButtonText );
-								} else {
-									$(form).find('.form-process').fadeOut();
-								}
-								if( data.alert != 'error' && elementRedirect ){
-									window.location.replace( elementRedirect );
-									return true;
-								}
-								if( elementAlert == 'inline' ) {
-									if( data.alert == 'error' ) {
-										var alertType = 'alert-danger';
-									} else {
-										var alertType = 'alert-success';
-									}
+		// 				$(form).ajaxSubmit({
+		// 					target: elementResult,
+		// 					dataType: 'json',
+		// 					success: function( data ) {
+		// 						if( elementLoader == 'button' ) {
+		// 							defButton.html( defButtonText );
+		// 						} else {
+		// 							$(form).find('.form-process').fadeOut();
+		// 						}
+		// 						if( data.alert != 'error' && elementRedirect ){
+		// 							window.location.replace( elementRedirect );
+		// 							return true;
+		// 						}
+		// 						if( elementAlert == 'inline' ) {
+		// 							if( data.alert == 'error' ) {
+		// 								var alertType = 'alert-danger';
+		// 							} else {
+		// 								var alertType = 'alert-success';
+		// 							}
 
-									elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + alertType ).html( data.message ).slideDown( 400 );
-								} else {
-									elementResult.attr( 'data-notify-type', data.alert ).attr( 'data-notify-msg', data.message ).html('');
-									SEMICOLON.widget.notifications( elementResult );
-								}
-								if( $(form).find('.g-recaptcha').children('div').length > 0 ) { grecaptcha.reset(); }
-								if( data.alert != 'error' ) { $(form).clearForm(); }
-							}
-						});
-					}
-				});
+		// 							elementResult.removeClass( 'alert-danger alert-success' ).addClass( 'alert ' + alertType ).html( data.message ).slideDown( 400 );
+		// 						} else {
+		// 							elementResult.attr( 'data-notify-type', data.alert ).attr( 'data-notify-msg', data.message ).html('');
+		// 							SEMICOLON.widget.notifications( elementResult );
+		// 						}
+		// 						if( $(form).find('.g-recaptcha').children('div').length > 0 ) { grecaptcha.reset(); }
+		// 						if( data.alert != 'error' ) { $(form).clearForm(); }
+		// 					}
+		// 				});
+		// 			}
+		// 		});
 
-			});
-		},
+		// 	});
+		// },
 
 		subscription: function(){
 
