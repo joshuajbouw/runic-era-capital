@@ -23,6 +23,7 @@ app.use(flash());
 
 // Static asset location
 app.use(express.static(__dirname + ('/public')));
+app.use("/vid", express.static(__dirname + '/public/vid'));
 
 // Set EJS as our template engine
 app.set('view engine', 'ejs');
