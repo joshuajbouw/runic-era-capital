@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express 				= require('express'),
 			app 						= express(),
-			port 						= process.env.PORT || 8081,
+			port 						= process.env.PORT,
 			expressLayouts 	= require('express-ejs-layouts'),
 			bodyParser			= require('body-parser'),
 			nodeMailer			= require('nodemailer'),
@@ -36,5 +36,5 @@ app.use(require('./app/routes'));
 
 // Start the server
 app.listen(port, () => {
-	console.log('App started on localhost:8081')
+	console.log('App started on localhost:80')
 })
