@@ -22,7 +22,7 @@ app.use(session({
 app.use(flash());
 
 // Static asset location
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(__dirname + ('/public')));
 
 // Set EJS as our template engine
 app.set('view engine', 'ejs');
