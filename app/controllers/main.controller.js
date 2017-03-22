@@ -11,26 +11,27 @@ module.exports = {
 };
 
 function showHome(req, res) {
-	res.render('pages/home');
+	res.render('pages/home', {title: 'Main'});
 }
 
 function showAbout(req, res) {
-	res.render('pages/about');
+	res.render('pages/about', {title: 'About Us'});
 }
 
 function showContact(req, res) {
   res.render('pages/contact', {
+  	title: 'Contact Us',
     success: req.flash('success')
   });
 }
 
 function showTech(req, res) {
-	res.render('pages/tech');
+	res.render('pages/tech', {title: 'Technology'});
 }
 
 function show404(req, res, next) {
 	res.status(404);
-	res.render('pages/404');
+	res.render('pages/404', {title: 'What lands have you wandered on...'});
 }
 
 function processContact (req,res) {
