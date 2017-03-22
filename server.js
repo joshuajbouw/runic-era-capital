@@ -9,7 +9,7 @@ const express 				= require('express'),
 			session					= require('express-session'),
 			cookieParser		= require('cookie-parser'),
 			flash						= require('connect-flash')
-			i18n						= require('i18n-abide');
+			il8n						= require('i18n-abide');
 
 // Set sessions and cookie parser
 app.use(cookieParser());
@@ -33,11 +33,11 @@ app.use(expressLayouts);
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Setup language settings
-app.use(i18n.abide({
-	supported_languages: ['en-US', 'en-GB', 'zh'],
+app.use(il8n.abide({
+	supported_languages: ['en-GB'], // 'en-US', 'zh'
 	default_lang: 'en-GB',
 	debug_lang: 'en-GB',
-	translation_directory: 'i18n'
+	translation_directory: 'il8n'
 }))
 
 // Set routes
