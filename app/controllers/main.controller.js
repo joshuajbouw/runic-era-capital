@@ -74,7 +74,7 @@ function processContact (req,res) {
 			return console.log('\nERROR: ' + error+'\n');
 		}
 		console.log('Contact form sent from successfully.');
-		req.flash('success', 'Successfully sent message!');
+		req.flash('success');
 		res.redirect('/contact');
 		// showSuccess;
 	});
