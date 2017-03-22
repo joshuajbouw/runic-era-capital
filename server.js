@@ -8,7 +8,8 @@ const express 				= require('express'),
 			nodeMailer			= require('nodemailer'),
 			session					= require('express-session'),
 			cookieParser		= require('cookie-parser'),
-			flash						= require('connect-flash');
+			flash						= require('connect-flash')
+			i18n						= require('i18n-abide');
 
 // Set sessions and cookie parser
 app.use(cookieParser());
@@ -30,6 +31,14 @@ app.use(expressLayouts);
 
 // Use body parser to grab info from a form. urlencoded is what our form will be processed as.
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Setup language settings
+app.use(i18n.abide({
+	supported_languages: ['en-US', 'en-GB', 'zh'],
+	default_lang: 'en-GB',
+	debug_lang: 'en-GB',
+	translation_directory: 'i18n'
+}))
 
 // Set routes
 app.use(require('./app/routes'));
