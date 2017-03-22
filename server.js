@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Setup language settings
 app.use(i18n.abide({
-	supported_languages: ['en-US', 'en-GB', 'zh'],
+	supported_languages: ['en-US', 'zh'], // 'en-GB'
 	default_lang: 'en-GB',
 	debug_lang: 'en-GB',
 	translation_directory: 'i18n'
