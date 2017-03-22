@@ -1,49 +1,37 @@
 <!-- Page Title
 ============================================= -->
 <section id="page-title">
-
 	<div class="container clearfix">
-		<h1>Page Not Found</h1>
+		<h1><%= gettext('Page Not Found') %></h1>
 		<ol class="breadcrumb">
-			<li><a href="/">Home</a></li>
+			<li><a href="/"><%= gettext('Home') %></a></li>
 			<li class="active">404</li>
 		</ol>
 	</div>
-
 </section><!-- #page-title end -->
-
 <!-- Content
 ============================================= -->
 <section id="content">
-
 	<div class="content-wrap">
-
 		<div class="container clearfix">
-
 			<div class="col_half nobottommargin">
-				<div class="error404 center">404</div>
+				<div class="error404 center">404!</div>
 			</div>
-
 			<div class="col_half nobottommargin col_last">
-
 				<div class="heading-block nobottomborder">
-					<h4>Oops! The Page you were looking for, couldn't be found.</h4>
-					<span>Try searching for the best match below:</span>
+					<h4><%= gettext('Oops! The Page you were looking for, couldn't be found.') %></h4>
+					<span><%= gettext('Try searching for the best match below') %>:</span>
 				</div>
 				<!-- Still needs to be linked to search function -->
-				<form action="#" method="get" role="form" class="nobottommargin">
+<!-- 				<form action="#" method="get" role="form" class="nobottommargin">
 					<div class="input-group input-group-lg">
 						<input type="text" class="form-control" placeholder="Search for Pages...">
 						<span class="input-group-btn">
 							<button class="btn btn-danger" type="button">Search</button>
 						</span>
 					</div>
-				</form>
-
+				</form> -->
 			</div>
-
 		</div>
-
 	</div>
-
 </section><!-- #content end

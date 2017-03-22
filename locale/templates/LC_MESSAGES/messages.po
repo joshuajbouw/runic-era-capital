@@ -21,23 +21,23 @@ msgstr ""
 
 #: /views/layout.ejs
 
-msgid ""
-msgstr "‮Runic Era Capital"
+msgid "Runic Era Capital"
+msgstr "‮"
 
-msgid ""
-msgstr "‮Home"
+msgid "Home"
+msgstr "‮"
 
-msgid ""
-msgstr "‮About Us"
+msgid "About Us"
+msgstr "‮"
 
-msgid ""
-msgstr "‮Technology"
+msgid "Technology"
+msgstr "‮"
 
-msgid ""
-msgstr "‮Contact"
+msgid "Contact"
+msgstr "‮"
 
-msgid ""
-msgstr "‮All Rights Reserved by Runic Era Capital Pvt. Ltd."
+msgid "All Rights Reserved by Runic Era Capital Pvt. Ltd."
+msgstr "‮"
 
 # /views/pages/home.ejs
 
@@ -80,7 +80,7 @@ msgstr "‮"
 msgid "Technology"
 msgstr "‮"
 
-msgid "To build and use the latest technology to ensure we can accurately spot and take advantage of developing markets and systems."
+msgid "To build and use the latest technology to ensure we can accurately spot and take advantage of developing markets and systems.'"
 msgstr "‮"
 
 msgid "Thanks for your interest!"
@@ -250,7 +250,7 @@ msgstr "‮"
 msgid "At Runic Era Capital, we were founded by like-minded individuals whom are driven by our core philosophy."
 msgstr "‮"
 
-msgid "Ethical"
+msgid "'Ethical"
 msgstr "‮"
 
 msgid "We will never back anything that can cause gross harm to others."
