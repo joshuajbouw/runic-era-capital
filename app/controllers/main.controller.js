@@ -1,5 +1,6 @@
-const nodemailer = require('nodemailer');
-			express = require('express');
+const nodemailer 		= require('nodemailer'),
+			express 			= require('express'),
+			i18n 					= require('i18n');
 
 module.exports = {
 	showHome: showHome,
@@ -12,33 +13,33 @@ module.exports = {
 
 function showHome(req, res) {
 	res.render('pages/home', {
-		title: req.gettext('Welcome')
+		title: i18n.__('Welcome')
 	});
 }
 
 function showAbout(req, res) {
 	res.render('pages/about', {
-		title: req.gettext('About Us')
+		title: i18n.__('About Us')
 	});
 }
 
 function showContact(req, res) {
   res.render('pages/contact', {
-  	title: req.gettext('Contact Us'),
+  	title: i18n.__('Contact Us'),
     success: req.flash('success')
   });
 }
 
 function showTech(req, res) {
 	res.render('pages/tech', {
-		title: req.gettext('Technology')
+		title: i18n.__('Technology')
 	});
 }
 
 function show404(req, res, next) {
 	res.status(404);
 	res.render('pages/404', {
-		title: req.gettext('What lands have you wandered on...')
+		title: i18n.__('What lands have you wandered on...')
 	});
 }
 

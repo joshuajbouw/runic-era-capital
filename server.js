@@ -8,8 +8,8 @@ const express 				= require('express'),
 			nodeMailer			= require('nodemailer'),
 			session					= require('express-session'),
 			cookieParser		= require('cookie-parser'),
-			flash						= require('connect-flash')
-			i18n						= require('i18n-abide');
+			flash						= require('connect-flash'),
+			i18n 						= require('i18n');
 
 // Set sessions and cookie parser
 app.use(cookieParser());
@@ -20,6 +20,7 @@ app.use(session({
 	resave: false, // Forces session to be saved back to the store.
 	saveUninitialized: false // Don't save unmodified sessions. Keeps everything light weight.
 }));
+
 app.use(flash());
 
 // Static asset location
@@ -32,18 +33,22 @@ app.use(expressLayouts);
 // Use body parser to grab info from a form. urlencoded is what our form will be processed as.
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Setup language settings
-app.use(i18n.abide({
-	supported_languages: ['en-US', 'zh'], // 'en-GB'
-	default_lang: 'en-GB',
-	debug_lang: 'en-GB',
-	translation_directory: 'i18n'
-}))
+// International localisation setup, https://github.com/mashpie/i18n-node docs
+i18n.configure({
+	locales:['en-GB', 'zh'],
+	defaultLocale: 'en-GB',
+	directory: __dirname + '/locales',
+	autoReload: true,
+	cookie: { maxAge: 60000 } 
+});
+
+// default: using 'accept-language' header to guess language settings
+app.use(i18n.init);
 
 // Set routes
 app.use(require('./app/routes'));
 
 // Start the server
 app.listen(port, () => {
-	console.log('App started on localhost:80')
+	console.log('App started on listening on port ' + port + '.')
 })
