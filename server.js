@@ -39,7 +39,8 @@ i18n.configure({
 	defaultLocale: 'en-GB',
 	directory: __dirname + '/locales',
 	autoReload: true,
-	cookie: { maxAge: 60000 } 
+	cookie: 'runic-capital-lang',
+	queryParameter: 'lang'
 });
 
 // default: using 'accept-language' header to guess language settings
