@@ -3,11 +3,11 @@
 <section id="page-title">
 
 	<div class="container clearfix">
-		<h1><%= gettext('Contact') %></h1>
-		<span><%= gettext('Get in Touch with Us') %></span>
+		<h1><%= __('Contact') %></h1>
+		<span><%= __('Get in Touch with Us') %></span>
 		<ol class="breadcrumb">
-			<li><a href="#"><%= gettext('Home') %></a></li>
-			<li class="active"><%= gettext('Contact') %></li>
+			<li><a href="#"><%= __('Home') %></a></li>
+			<li class="active"><%= __('Contact') %></li>
 		</ol>
 	</div>
 
@@ -23,11 +23,11 @@
 		============================================= -->
 		<div id="contact-form-overlay" class="clearfix">
 			<% if (success.length > 0) { %>
-			<div class="alert alert-success"><%= success %><p><%= gettext('Successfully sent message!') %></p></div>
+			<div class="alert alert-success"><%= success %><p><%= __('Successfully sent message!') %></p></div>
 			<% } %>
 
 			<div class="fancy-title title-dotted-border">
-				<h3><%= gettext('Send us an Email') %></h3>
+				<h3><%= __('Send us an Email') %></h3>
 			</div>
 
 			<div class="contact-widget">
@@ -39,44 +39,44 @@
 				<form class="nobottommargin" id="contactform" name="contactform" action="/contact" method="POST">
 
 					<div class="col_half">
-						<label for="contactformname"><%= gettext('Name') %> <small>*</small></label>
+						<label for="contactformname"><%= __('Name') %> <small>*</small></label>
 						<input maxlength="32" type="text" id="contactformname" name="contactformname" value="" class="sm-form-control required" />
 					</div>
 
 					<div class="col_half col_last">
-						<label for="contactformemail"><%= gettext('Email') %> <small>*</small></label>
+						<label for="contactformemail"><%= __('Email') %> <small>*</small></label>
 						<input maxlength="254" type="email" id="contactformemail" name="contactformemail" value="" class="required email sm-form-control" />
 					</div>
 
 					<div class="clear"></div>
 
 					<div class="col_half">
-						<label for="contactformphone"><%= gettext('Phone') %></label>
+						<label for="contactformphone"><%= __('Phone') %></label>
 						<input maxlength="16" type="text" id="contactformphone" name="contactformphone" value="" class="sm-form-control" />
 					</div>
 
 					<div class="col_half col_last">
-						<label for="contactformservice"><%= gettext('Context') %> <small>*</small></label>
+						<label for="contactformservice"><%= __('Context') %> <small>*</small></label>
 						<select id="contactformservice" name="contactformservice" class="required sm-form-control">
-							<option value="">-- <%= gettext('Select One') %> --</option>
-							<option value="General Information"><%= gettext('General Information') %></option>
-							<option value="Investment Enquery"><%= gettext('Investment Enquery') %></option>
-							<option value="Employement Opening"><%= gettext('Employment Opening') %></option>
-							<option value="Other"><%= gettext('Other') %></option>
+							<option value="">-- <%= __('Select One') %> --</option>
+							<option value="General Information"><%= __('General Information') %></option>
+							<option value="Investment Enquery"><%= __('Investment Enquery') %></option>
+							<option value="Employement Opening"><%= __('Employment Opening') %></option>
+							<option value="Other"><%= __('Other') %></option>
 						</select>
 					</div>
 
 					<div class="clear"></div>
 
 					<div class="col_full">
-						<label for="contactformsubject"><%= gettext('Subject') %> <small>*</small></label>
+						<label for="contactformsubject"><%= __('Subject') %> <small>*</small></label>
 						<input maxlength="16" type="text" id="contactformsubject" name="contactformsubject" value="" class="required sm-form-control" />
 					</div>
 
 					<div class="col_full">
-						<label maxlength="" for="contactformmessage"><%= gettext('Message') %> <small>*</small></label>
+						<label maxlength="" for="contactformmessage"><%= __('Message') %> <small>*</small></label>
 						<textarea class="required sm-form-control" id="contactformmessage" name="contactformmessage" rows="6" cols="30"></textarea>
-						<p><small><%= gettext('Max 500 characters') %></small></p>
+						<p><small><%= __('Max 500 characters') %></small></p>
 					</div>
 
 					<div class="col_full hidden">
@@ -91,7 +91,7 @@
 					</div>
 
 					<div class="col_full">
-						<button class="button button-3d nomargin" type="submit" id="contactformsubmit" name="contactformsubmit" value="submit"><%= gettext('Send Message') %></button>
+						<button class="button button-3d nomargin" type="submit" id="contactformsubmit" name="contactformsubmit" value="submit"><%= __('Send Message') %></button>
 <!-- 						<a href="/contact" class="button button-border button-rounded button-fill button-teal" type="submit" id="contactformsubmit" name="contactformsubmit" value="submit"><span>Send Message</span></a> -->
 					</div>
 
