@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // International localisation setup, https://github.com/mashpie/i18n-node docs
 i18n.configure({
-	locales:['en-GB', 'zh'],
+	locales:['en-GB', 'zh', 'en-US'],
 	defaultLocale: 'en-GB',
 	directory: __dirname + '/locales',
 	autoReload: true,
